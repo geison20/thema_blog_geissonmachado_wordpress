@@ -29,13 +29,14 @@
     </div>
     <div class="footer-copyright">
       <div class="container">
-      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      <p class="left">Desenvolvido por Gêisson Machado Antunes</p>
+      <div class="right">Copyright@<?php echo date('Y') ?></div>
       </div>
     </div>
   </footer>
 
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Jquery implements -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
   <?php wp_footer(); ?>
 

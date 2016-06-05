@@ -26,13 +26,14 @@
           </div>
         </div>
         
+        <span  class="scrollspy" id="servicos"></span>
+        
         <!-- bloco mail business -->
         <div class="col s12 m4">
           <div class="icon-block">
             <h2 class="center indigo-text"><i class="material-icons">business</i></h2>
             <h5 class="center">Speeds up development</h5>
             <!-- Scroolspy para produtos -->
-            <span  class="scrollspy" id="servicos"></span>
             <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
           </div>
         </div>
@@ -71,7 +72,38 @@
     </div>
   </div>
 
- <section class="section no-pad-bot card-panel teal" id="index-banner">
+  <section class="section no-pad-bot card-panel red accent-2" id="index-banner">
+      <div class="container scrollspy" id="blog">
+        <h1 class="header center white-text">Blog de Tecnologia</h1>
+      </div>
+      <br>
+  </section>
+  <div class="container" >
+    <div class="section">
+      <div class="row">
+        <div class="col s12 center">
+
+            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                    <div class="col s12 m4">
+                      <h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+                      <p class="center"><?php the_content('<br>Continue lendo ...'); ?></p>
+                      <p class="center">Postado por <?php the_author() ?> em <?php the_time('d/M/Y') ?></p>
+                    </div>
+            <?php endwhile?>
+                  <div class="row">
+                    <div class="right"><?php next_posts_link('Posts anteriores') ?></div>
+                    <div class="left"><?php previous_posts_link('Posts recentes') ?></div>
+                  </div>
+            <?php else: ?>
+                 
+            <?php endif; ?>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <section class="section no-pad-bot card-panel teal" id="index-banner" style="margin-bottom: 0;">
     <div class="container">
       <br><br>
       <h2 class="header center white-text">Entre em contato</h2>
@@ -105,33 +137,18 @@
     </div>
  </section>
 
-
-  <div class="container">
-    <div class="section">
-
-      <div class="row">
-        <div class="col s12 center">
-          <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h4 id="teste" class="section scrollspy">Contact Us</h4>
-          <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="<?php echo get_bloginfo('template_directory');?>/images/background3.jpg" alt="Unsplashed background img 3"></div>
-  </div>
-
+ <!-- SOCIAL MIDIAS -->
+<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+    <a class="btn-floating btn-large blue">
+      <i class="material-icons">person_add</i>
+    </a>
+    <ul>
+      <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+      <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+      <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+      <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+    </ul>
+</div>
 
 <?php get_footer(); ?>
   
