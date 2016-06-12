@@ -90,3 +90,9 @@ footer.page-footer {
     50% { opacity:0; }
     100% { opacity:1; }
 }
+
+.caption {
+    font-size: 1.15rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+}

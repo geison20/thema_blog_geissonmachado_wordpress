@@ -1,6 +1,18 @@
 (function($){
   $(function(){
 
+    
+    /*
+    |--------------------------------------------------------------------------
+    | smoothScroll 
+    |--------------------------------------------------------------------------
+    |
+    | Plugin para suavizar scroll.
+    | 
+    |
+    */
+    $.smoothScroll();
+
     /*
     |--------------------------------------------------------------------------
     | ScrollSpy 
@@ -13,7 +25,18 @@
     */
     $('.scrollspy').scrollSpy();
 
-
+    /*
+    |--------------------------------------------------------------------------
+    | transit.JS 
+    |--------------------------------------------------------------------------
+    |
+    | Plugin Jquery para fazer transicoes de tela
+    | 
+    | Dependencia do Jquery.
+    | http://ricostacruz.com/jquery.transit/#top
+    |
+    */
+    $.fx.speeds._default = 1200;
 
     /*
     |--------------------------------------------------------------------------
@@ -26,12 +49,33 @@
     |
     */
     $(".typed-text-writer").typed({
-        strings: ['<strong>Aplicacao Web</strong>','<strong>seu SEO</strong>'],
+        strings: ['<strong>Desenvolvemos sua solução.</strong>'],
         contentType: 'html',
-        typeSpeed: 0
+        typeSpeed: 0,
+        callback: function() {
+            $(".name-one").transition({ 
+                y: -20,
+                opacity: 1, 
+            });
+            $(".name-two").transition({ 
+                y: -50,
+                opacity: 1, 
+            });
+        },
     
 
     });
+
+    /*
+    |--------------------------------------------------------------------------
+    | MaterialBox
+    |--------------------------------------------------------------------------
+    |
+    | Materialize feature
+    | 
+    |
+    */
+    $('.materialboxed').materialbox();
 
 
 
