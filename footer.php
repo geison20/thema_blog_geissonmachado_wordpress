@@ -1,13 +1,15 @@
 <footer class="page-footer teal">
         
 	<div class="container">
-      <div class="row">
-        <div class="col l7 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+      <div class="row white-text">
+        <div class="col l7 s6">
+          <p>
+	          <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer-desc') ) : ?>
+	          <?php endif; ?>	
+          </p>
         </div>
 
-        <div class="col l5 s12 white-text ">
+        <div class="col l5 s6">
 	        <h5>Mídias Sociais</h5>
 	        <div class="row">
 	        	<div class="col 2"><a class="white-text" target="__blank" href="<?php echo get_the_author_meta( 'facebook_profile' ); ?>"><i class="fa fa-facebook-square fa-3x" aria-hidden="true" ></i></a></div>

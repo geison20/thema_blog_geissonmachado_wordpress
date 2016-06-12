@@ -183,6 +183,13 @@
             'before_widget' => '',
             'after_widget'  => '',
         ));
+
+        // Footer Desc 
+        register_sidebar(array(
+            'name'          => 'footer-desc',
+            'before_widget' => '',
+            'after_widget'  => '',
+        ));
     
     }
 
