@@ -190,6 +190,13 @@
             'before_widget' => '',
             'after_widget'  => '',
         ));
+
+        // Menu Desc 
+        register_sidebar(array(
+            'name'          => 'nav-menu',
+            'before_widget' => '',
+            'after_widget'  => '',
+        ));
     
     }
 

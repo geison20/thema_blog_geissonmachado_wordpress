@@ -2,7 +2,7 @@
 
 get_header(); 
 get_template_part('navbar');  
-get_template_part('card-panel');
+get_template_part('panel-header');
 get_template_part('produtos');
 ?>
 
